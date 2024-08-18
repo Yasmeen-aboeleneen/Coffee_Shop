@@ -92,11 +92,17 @@ class _SplashScreenState extends State<SplashScreen>
                   SizedBox(
                     height: h * .04,
                   ),
-                  Buttons(
-                    title: "Get Started",
+                  CustomButton(
+                    title: "Start",
                     onPressed: () {
                       Get.to(() => const HomeScreen());
                     },
+                    color: kPrimary2,
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: w * .07,
+                        color: kveryWhite,
+                        height: 1.5),
                   ),
                 ],
               ),

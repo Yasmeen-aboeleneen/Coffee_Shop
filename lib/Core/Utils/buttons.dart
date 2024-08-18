@@ -1,30 +1,32 @@
-import 'package:coffee_shop/Core/Constants/colors.dart';
 import 'package:flutter/material.dart';
 
-class Buttons extends StatelessWidget {
-  const Buttons(
-      {super.key, required this.title, required Null Function() onPressed});
+class CustomButton extends StatelessWidget {
+  const CustomButton({
+    super.key,
+    required this.onPressed,
+    required this.title,
+    required this.color,
+    required this.style,
+  });
+  final void Function()? onPressed;
   final String title;
-
+  final Color color;
+  final TextStyle style;
   @override
   Widget build(BuildContext context) {
     var h = MediaQuery.of(context).size.height;
     var w = MediaQuery.of(context).size.width;
-    return Material(
-      color: kPrimary2,
-      borderRadius: const BorderRadius.all(Radius.circular(15)),
-      child: InkWell(
-        child: SizedBox(
-          height: h * .063,
-          width: w * .6,
-          child: Center(
-            child: Text(
-              title,
-              style: TextStyle(
-                  fontSize: w * .06,
-                  fontWeight: FontWeight.bold,
-                  color: kveryWhite),
-            ),
+    return GestureDetector(
+      onTap: onPressed,
+      child: Container(
+        height: h * .055,
+        width: w * .39,
+        decoration: BoxDecoration(
+            color: color, borderRadius: BorderRadius.circular(10)),
+        child: Center(
+          child: Text(
+            title,
+            style: style,
           ),
         ),
       ),

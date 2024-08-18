@@ -1,4 +1,3 @@
- 
 import 'package:coffee_shop/Core/Constants/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -49,7 +48,6 @@ class _CustomPasswordtextfieldState extends State<CustomPasswordtextfield> {
           borderRadius: BorderRadius.circular(25),
         ),
         floatingLabelBehavior: FloatingLabelBehavior.always,
-        // label: Text(widget.labelText, style: Fonts.customTextFieldText),
         suffixIcon: GestureDetector(
           onTap: _toggleObscured,
           child: Icon(

@@ -1,7 +1,6 @@
- 
 import 'package:coffee_shop/Core/Constants/colors.dart';
 import 'package:flutter/material.dart';
- 
+
 class SocialmediaRow extends StatelessWidget {
   const SocialmediaRow({
     Key? key,
@@ -19,7 +18,7 @@ class SocialmediaRow extends StatelessWidget {
         padding: const EdgeInsets.all(12),
         child: Container(
           decoration: BoxDecoration(
-              border: Border.all(color: kPrimary, width: 2),
+              border: Border.all(color: kPrimary2, width: 2),
               borderRadius: const BorderRadius.all(Radius.circular(25))),
           width: w * .36,
           height: h * .06,

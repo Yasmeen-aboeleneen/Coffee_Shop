@@ -23,7 +23,7 @@ class OtpScreen extends StatelessWidget {
               style: GoogleFonts.notoSansOlChiki(
                   fontWeight: FontWeight.bold,
                   fontSize: w * .068,
-                  color: kPrimary),
+                  color: kPrimary2),
             ),
           ),
           SizedBox(
@@ -42,8 +42,8 @@ class OtpScreen extends StatelessWidget {
           ),
           OtpTextField(
             numberOfFields: 5,
-            enabledBorderColor: kPrimary,
-            borderColor: kPrimary,
+            enabledBorderColor: kPrimary2,
+            borderColor: kPrimary2,
             cursorColor: kPrimary,
             fieldWidth: w * .13,
             borderRadius: BorderRadius.circular(20),

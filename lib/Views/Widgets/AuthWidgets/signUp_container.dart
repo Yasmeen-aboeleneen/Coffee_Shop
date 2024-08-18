@@ -64,12 +64,18 @@ class SignupContainer extends StatelessWidget {
                 SizedBox(
                   height: h * .03,
                 ),
-                Buttons(
-                    onPressed: () {
-                      Get.to(() => const SuccessSignupScreen());
-                    },
-                    title: "Sign Up",
-                     ),
+                CustomButton(
+                  onPressed: () {
+                    Get.to(() => const SuccessSignupScreen());
+                  },
+                  title: "Sign Up",
+                  color: kPrimary2,
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: w * .05,
+                    color: kveryWhite,
+                  ),
+                ),
                 SizedBox(
                   height: h * .022,
                 ),

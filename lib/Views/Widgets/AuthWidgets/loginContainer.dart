@@ -2,6 +2,7 @@ import 'package:coffee_shop/Core/Constants/colors.dart';
 import 'package:coffee_shop/Core/Constants/images.dart';
 import 'package:coffee_shop/Core/Utils/buttons.dart';
 import 'package:coffee_shop/Views/Auth/signUP_screen.dart';
+import 'package:coffee_shop/Views/Splash/splash_screen.dart';
 import 'package:coffee_shop/Views/Widgets/AuthWidgets/customPassTextField.dart';
 import 'package:coffee_shop/Views/Widgets/AuthWidgets/customRow.dart';
 import 'package:coffee_shop/Views/Widgets/AuthWidgets/customTextField.dart';
@@ -51,11 +52,17 @@ class Logincontainer extends StatelessWidget {
               SizedBox(
                 height: h * .001,
               ),
-              Buttons(
+              CustomButton(
                 onPressed: () {
-                  // Get.to(() => const WelcomeSplashScreen());
+                  Get.to(() => const SplashScreen());
                 },
                 title: "Login",
+                color: kPrimary2,
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: w * .05,
+                  color: kveryWhite,
+                ),
               ),
               SizedBox(
                 height: h * .022,
@@ -67,10 +74,11 @@ class Logincontainer extends StatelessWidget {
                   child: Text(
                     "Don't have an account ? Sign up",
                     style: GoogleFonts.notoSansOlChiki(
-                        fontWeight: FontWeight.bold,
-                        fontSize: w * .04,
-                        color: kPrimary,
-                        decorationColor: kPrimary),
+                      fontWeight: FontWeight.bold,
+                      fontSize: w * .04,
+                      color: kPrimary,
+                      decorationColor: kPrimary,
+                    ),
                   )),
               const Dividers(
                 text: 'Login with',

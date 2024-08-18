@@ -20,7 +20,7 @@ class SuccessNewPassScreen extends StatelessWidget {
           height: h * .5,
           width: w * .89,
           decoration: BoxDecoration(
-            color: kPrimary,
+            color: kPrimary2,
             borderRadius: BorderRadius.circular(45),
           ),
           padding: const EdgeInsets.all(15),

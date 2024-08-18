@@ -14,12 +14,12 @@ class ForgotPasswordScreen extends StatelessWidget {
     var w = MediaQuery.of(context).size.width;
     return Scaffold(
       resizeToAvoidBottomInset: true,
-      backgroundColor: kPrimary,
+      backgroundColor: kDarkBrown,
       body: Center(
         child: Container(
           margin: const EdgeInsets.all(10),
           padding: const EdgeInsets.symmetric(vertical: 25, horizontal: 10),
-          height: h * .4,
+          height: h * .45,
           width: w,
           decoration: const BoxDecoration(
               borderRadius: BorderRadius.all(
@@ -28,8 +28,13 @@ class ForgotPasswordScreen extends StatelessWidget {
               color: kveryWhite),
           child: Column(
             children: [
-              const Text(
+              Text(
                 "Forgot Password",
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: w * .07,
+                    color: kPrimary2,
+                    height: 1.5),
               ),
               SizedBox(
                 height: h * .02,
@@ -51,13 +56,19 @@ class ForgotPasswordScreen extends StatelessWidget {
                   labelText: "Email",
                   iconData: Icons.mail_outline_rounded),
               SizedBox(
-                height: h * .04,
+                height: h * .03,
               ),
-              Buttons(
+              CustomButton(
                 title: "Send",
                 onPressed: () {
                   Get.to(() => const OtpScreen());
                 },
+                color: kPrimary2,
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: w * .05,
+                  color: kveryWhite,
+                ),
               )
             ],
           ),

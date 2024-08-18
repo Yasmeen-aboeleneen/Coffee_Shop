@@ -24,8 +24,8 @@ class NewPasswordScreen extends StatelessWidget {
                 "Reset Your Password",
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
-                  fontSize: w * .033,
-                  color: kPrimary,
+                  fontSize: w * .065,
+                  color: kPrimary2,
                 ),
               ),
             ),
@@ -61,11 +61,17 @@ class NewPasswordScreen extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 75),
-              child: Buttons(
+              child: CustomButton(
                 title: "Reset",
                 onPressed: () {
                   Get.to(() => const SuccessNewPassScreen());
                 },
+                color: kPrimary2,
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: w * .062,
+                    color: kveryWhite,
+                    height: 1.5),
               ),
             ),
             SizedBox(
