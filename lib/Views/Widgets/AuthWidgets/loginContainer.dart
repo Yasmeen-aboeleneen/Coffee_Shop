@@ -1,9 +1,12 @@
- 
 import 'package:coffee_shop/Core/Constants/colors.dart';
+import 'package:coffee_shop/Core/Constants/images.dart';
+import 'package:coffee_shop/Core/Utils/buttons.dart';
+import 'package:coffee_shop/Views/Auth/signUP_screen.dart';
 import 'package:coffee_shop/Views/Widgets/AuthWidgets/customPassTextField.dart';
 import 'package:coffee_shop/Views/Widgets/AuthWidgets/customRow.dart';
 import 'package:coffee_shop/Views/Widgets/AuthWidgets/customTextField.dart';
 import 'package:coffee_shop/Views/Widgets/AuthWidgets/dividers.dart';
+import 'package:coffee_shop/Views/Widgets/AuthWidgets/socialMediaRow.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/get_navigation.dart';
@@ -48,19 +51,18 @@ class Logincontainer extends StatelessWidget {
               SizedBox(
                 height: h * .001,
               ),
-              // CustomButton(
-              //     onPressed: () {
-              //       Get.to(() => const WelcomeSplashScreen());
-              //     },
-              //     title: "Login",
-              //     color: kPrimary,
-              //     style: Fonts.splashButtonText),
+              Buttons(
+                onPressed: () {
+                  // Get.to(() => const WelcomeSplashScreen());
+                },
+                title: "Login",
+              ),
               SizedBox(
                 height: h * .022,
               ),
               InkWell(
                   onTap: () {
-                    // Get.to(() => const SignupScreen());
+                    Get.to(() => const SignupScreen());
                   },
                   child: Text(
                     "Don't have an account ? Sign up",
@@ -73,11 +75,11 @@ class Logincontainer extends StatelessWidget {
               const Dividers(
                 text: 'Login with',
               ),
-              const Row(
+              Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  // SocialmediaRow(image: Images.google, text: "Google"),
-                  // SocialmediaRow(image: Images.facebook, text: "Facebook"),
+                  SocialmediaRow(image: Images.google, text: "Google"),
+                  SocialmediaRow(image: Images.facebook, text: "Facebook"),
                 ],
               )
             ],

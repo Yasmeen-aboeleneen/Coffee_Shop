@@ -1,5 +1,6 @@
 import 'package:coffee_shop/Core/Constants/colors.dart';
- 
+import 'package:coffee_shop/Views/Widgets/AuthWidgets/loginContainer.dart';
+
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -10,7 +11,7 @@ class LoginScreen extends StatelessWidget {
     return const Scaffold(
       backgroundColor: kPrimary,
       resizeToAvoidBottomInset: true,
-      // body: Logincontainer(),
+      body: Logincontainer(),
     );
   }
 }

@@ -1,5 +1,5 @@
- 
 import 'package:coffee_shop/Core/Constants/colors.dart';
+import 'package:coffee_shop/Views/Widgets/AuthWidgets/signUp_container.dart';
 import 'package:flutter/material.dart';
 
 class SignupScreen extends StatelessWidget {
@@ -12,7 +12,7 @@ class SignupScreen extends StatelessWidget {
       resizeToAvoidBottomInset: true,
       body: Stack(
         children: [
-          // SignupContainer(),
+          SignupContainer(),
         ],
       ),
     );

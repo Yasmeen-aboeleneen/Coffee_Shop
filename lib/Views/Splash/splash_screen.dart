@@ -94,7 +94,7 @@ class _SplashScreenState extends State<SplashScreen>
                   ),
                   Buttons(
                     title: "Get Started",
-                    onTap: () {
+                    onPressed: () {
                       Get.to(() => const HomeScreen());
                     },
                   ),

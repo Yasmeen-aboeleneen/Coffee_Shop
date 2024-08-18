@@ -1,9 +1,8 @@
- 
 import 'package:coffee_shop/Core/Constants/colors.dart';
+import 'package:coffee_shop/Views/Auth/new_password_screen.dart';
 import 'package:flutter/material.dart';
- 
-import 'package:get/get_core/src/get_main.dart';
-import 'package:get/get_navigation/get_navigation.dart';
+import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class OtpScreen extends StatelessWidget {
@@ -34,24 +33,26 @@ class OtpScreen extends StatelessWidget {
             "We've sent the code to\n yasmeenaboeleneen10@gmail.com",
             textAlign: TextAlign.center,
             style: GoogleFonts.notoSansOlChiki(
-                fontWeight: FontWeight.bold, fontSize: w * .04,  ),
+              fontWeight: FontWeight.bold,
+              fontSize: w * .04,
+            ),
           ),
           SizedBox(
             height: h * .06,
           ),
-          // OtpTextField(
-          //   numberOfFields: 5,
-          //   enabledBorderColor: kPrimary,
-          //   borderColor: kPrimary,
-          //   cursorColor: kPrimary,
-          //   fieldWidth: w * .13,
-          //   borderRadius: BorderRadius.circular(20),
-          //   showFieldAsBox: true,
-          //   onCodeChanged: (String code) {},
-          //   onSubmit: (String verificationCode) {
-          //     Get.to(() => const NewPasswordScreen());
-          //   },
-          // ),
+          OtpTextField(
+            numberOfFields: 5,
+            enabledBorderColor: kPrimary,
+            borderColor: kPrimary,
+            cursorColor: kPrimary,
+            fieldWidth: w * .13,
+            borderRadius: BorderRadius.circular(20),
+            showFieldAsBox: true,
+            onCodeChanged: (String code) {},
+            onSubmit: (String verificationCode) {
+              Get.to(() => const NewPasswordScreen());
+            },
+          ),
           SizedBox(
             height: h * .06,
           ),

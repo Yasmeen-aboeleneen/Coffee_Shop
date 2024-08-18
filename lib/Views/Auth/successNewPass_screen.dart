@@ -1,6 +1,5 @@
- 
-
 import 'package:coffee_shop/Core/Constants/colors.dart';
+import 'package:coffee_shop/Views/Auth/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/get_navigation.dart';
@@ -48,7 +47,7 @@ class SuccessNewPassScreen extends StatelessWidget {
                 ),
                 InkWell(
                   onTap: () {
-                    // Get.to(() => const LoginScreen());
+                    Get.to(() => const LoginScreen());
                   },
                   child: Text(
                     textAlign: TextAlign.center,

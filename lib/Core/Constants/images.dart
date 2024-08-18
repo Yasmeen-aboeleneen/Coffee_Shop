@@ -23,4 +23,9 @@ class Images {
   static String search = "Assets/ic_search.png";
   static String star = "Assets/ic_star_filled.png";
   static String milk = "Assets/milk.png";
+
+  static String facebook = "Assets/facebook.png";
+  static String google = "Assets/google.jpg";
+
+  static String beansImg = "Assets/beansimg.jpeg";
 }

@@ -1,8 +1,12 @@
- 
 import 'package:coffee_shop/Core/Constants/colors.dart';
+import 'package:coffee_shop/Core/Constants/images.dart';
+import 'package:coffee_shop/Core/Utils/buttons.dart';
+import 'package:coffee_shop/Views/Auth/login_screen.dart';
+import 'package:coffee_shop/Views/Auth/successSignUP_screen.dart';
 import 'package:coffee_shop/Views/Widgets/AuthWidgets/customPassTextField.dart';
 import 'package:coffee_shop/Views/Widgets/AuthWidgets/customTextField.dart';
 import 'package:coffee_shop/Views/Widgets/AuthWidgets/dividers.dart';
+import 'package:coffee_shop/Views/Widgets/AuthWidgets/socialMediaRow.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/get_navigation.dart';
@@ -60,19 +64,18 @@ class SignupContainer extends StatelessWidget {
                 SizedBox(
                   height: h * .03,
                 ),
-                // CustomButton(
-                //     onPressed: () {
-                //       Get.to(() => const SuccessSignupScreen());
-                //     },
-                //     title: "Sign Up",
-                //     color: kPrimary,
-                //     style: Fonts.splashButtonText),
+                Buttons(
+                    onPressed: () {
+                      Get.to(() => const SuccessSignupScreen());
+                    },
+                    title: "Sign Up",
+                     ),
                 SizedBox(
                   height: h * .022,
                 ),
                 InkWell(
                     onTap: () {
-                      // Get.to(() => const LoginScreen());
+                      Get.to(() => const LoginScreen());
                     },
                     child: Text(
                       "Already have an account ? Login",
@@ -85,11 +88,11 @@ class SignupContainer extends StatelessWidget {
                 const Dividers(
                   text: "Sign up with",
                 ),
-                const Row(
+                Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    // SocialmediaRow(image: Images.google, text: "Google"),
-                    // SocialmediaRow(image: Images.facebook, text: "Facebook"),
+                    SocialmediaRow(image: Images.google, text: "Google"),
+                    SocialmediaRow(image: Images.facebook, text: "Facebook"),
                   ],
                 )
               ],

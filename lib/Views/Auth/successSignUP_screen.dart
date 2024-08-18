@@ -1,6 +1,5 @@
- 
-
 import 'package:coffee_shop/Core/Constants/colors.dart';
+import 'package:coffee_shop/Views/Auth/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -45,7 +44,7 @@ class SuccessSignupScreen extends StatelessWidget {
               ),
               InkWell(
                 onTap: () {
-                  // Get.to(() => const LoginScreen());
+                  Get.to(() => const LoginScreen());
                 },
                 child: Text(
                   textAlign: TextAlign.center,

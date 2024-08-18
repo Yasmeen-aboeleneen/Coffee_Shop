@@ -1,9 +1,8 @@
- import 'package:coffee_shop/Core/Constants/colors.dart';
+import 'package:coffee_shop/Core/Constants/colors.dart';
+import 'package:coffee_shop/Views/Auth/forgot_Password_Screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-
- 
 
 class CustomRow extends StatefulWidget {
   const CustomRow({super.key});
@@ -17,7 +16,6 @@ class _CustomRawState extends State<CustomRow> {
 
   @override
   Widget build(BuildContext context) {
-    // LoginControllerImplement controller = Get.put(LoginControllerImplement());
     var w = MediaQuery.of(context).size.width;
     return Row(
       children: [
@@ -30,9 +28,6 @@ class _CustomRawState extends State<CustomRow> {
                 isCheck = newValue;
               });
             }),
-        //  const      SizedBox(
-        //     width: 1,
-        //   ),
         Expanded(
             child: RichText(
                 text: TextSpan(children: [
@@ -44,10 +39,9 @@ class _CustomRawState extends State<CustomRow> {
                 fontWeight: FontWeight.bold),
           ),
         ]))),
-
         GestureDetector(
             onTap: () {
-              // Get.to(() => const ForgotPasswordScreen());
+              Get.to(() => const ForgotPasswordScreen());
             },
             child: Text(
               "Forgot Password ?",

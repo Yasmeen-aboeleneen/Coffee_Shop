@@ -1,8 +1,9 @@
- 
 import 'package:coffee_shop/Core/Constants/colors.dart';
+import 'package:coffee_shop/Core/Utils/buttons.dart';
+import 'package:coffee_shop/Views/Auth/otp_screen.dart';
+import 'package:coffee_shop/Views/Widgets/AuthWidgets/customTextField.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get_core/src/get_main.dart';
-import 'package:get/get_navigation/get_navigation.dart';
+import 'package:get/get.dart';
 
 class ForgotPasswordScreen extends StatelessWidget {
   const ForgotPasswordScreen({super.key});
@@ -27,9 +28,8 @@ class ForgotPasswordScreen extends StatelessWidget {
               color: kveryWhite),
           child: Column(
             children: [
-              Text(
+              const Text(
                 "Forgot Password",
-                 
               ),
               SizedBox(
                 height: h * .02,
@@ -37,25 +37,28 @@ class ForgotPasswordScreen extends StatelessWidget {
               Text(
                 textAlign: TextAlign.center,
                 "Please enter your email to\n reset password",
-                // style: Fonts.customText,
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: w * .033,
+                  color: kPrimary,
+                ),
               ),
               SizedBox(
                 height: h * .04,
               ),
-              // const Customtextfield(
-              //     hintText: "Enter your email",
-              //     labelText: "Email",
-              //     iconData: Icons.mail_outline_rounded),
+              const Customtextfield(
+                  hintText: "Enter your email",
+                  labelText: "Email",
+                  iconData: Icons.mail_outline_rounded),
               SizedBox(
                 height: h * .04,
               ),
-              // CustomButton(
-              //     onPressed: () {
-              //       Get.to(() => const OtpScreen());
-              //     },
-              //     title: "Send",
-              //     color: kPrimary,
-              //     style: Fonts.splashButtonText)
+              Buttons(
+                title: "Send",
+                onPressed: () {
+                  Get.to(() => const OtpScreen());
+                },
+              )
             ],
           ),
         ),
