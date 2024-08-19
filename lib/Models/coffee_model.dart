@@ -24,7 +24,7 @@ final listGridCoffee = [
     image: Images.coffee2,
     name: 'Caffee Mocha',
     type: 'Deep Foam',
-    rate: 4.8,
+    rate: 4,
     review: 230,
     description:
         'A cappuccino is an approximately 150 ml (5 oz) beverage, with 25 ml of espresso coffee and 85ml of fresh milk the fo',
@@ -34,7 +34,7 @@ final listGridCoffee = [
     image: Images.coffee2,
     name: 'Flat White',
     type: 'Espresso',
-    rate: 4.8,
+    rate: 3.5,
     review: 230,
     description:
         'A cappuccino is an approximately 150 ml (5 oz) beverage, with 25 ml of espresso coffee and 85ml of fresh milk the fo',
@@ -54,7 +54,7 @@ final listGridCoffee = [
     image: Images.coffee4,
     name: 'Caffe Panna',
     type: 'Ice/Hot',
-    rate: 4.8,
+    rate: 4.3,
     review: 230,
     description:
         'A cappuccino is an approximately 150 ml (5 oz) beverage, with 25 ml of espresso coffee and 85ml of fresh milk the fo',

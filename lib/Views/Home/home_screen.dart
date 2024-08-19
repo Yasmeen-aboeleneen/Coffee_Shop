@@ -43,45 +43,47 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     var h = MediaQuery.of(context).size.height;
     var w = MediaQuery.of(context).size.width;
-    return Scaffold(
-        body: menu[indexMenu]['fragment'] as Widget,
-        bottomNavigationBar: Container(
-          padding: const EdgeInsets.all(8),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: List.generate(menu.length, (index) {
-              Map item = menu[index];
-              bool isActive = indexMenu == index;
-              return InkWell(
-                onTap: () {
-                  indexMenu = index;
-                  setState(() {});
-                },
-                child: SizedBox(
-                  height: h * .06,
-                  width: w * .2,
-                  child: Column(
-                    children: [
-                      ImageIcon(
-                        AssetImage(item[isActive ? 'icon_active' : 'icon']),
-                        size: h * .035,
-                        color: isActive ? kPrimary2 : kPrimary,
-                      ),
-                      if (isActive) const Gap(6),
-                      if (isActive)
-                        Container(
-                          height: h * .004,
-                          width: w * .045,
-                          decoration: BoxDecoration(
-                              color: kPrimary2,
-                              borderRadius: BorderRadius.circular(15)),
-                        )
-                    ],
+    return SafeArea(
+      child: Scaffold(
+          body: menu[indexMenu]['fragment'] as Widget,
+          bottomNavigationBar: Container(
+            padding: const EdgeInsets.all(8),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: List.generate(menu.length, (index) {
+                Map item = menu[index];
+                bool isActive = indexMenu == index;
+                return InkWell(
+                  onTap: () {
+                    indexMenu = index;
+                    setState(() {});
+                  },
+                  child: SizedBox(
+                    height: h * .06,
+                    width: w * .2,
+                    child: Column(
+                      children: [
+                        ImageIcon(
+                          AssetImage(item[isActive ? 'icon_active' : 'icon']),
+                          size: h * .035,
+                          color: isActive ? kPrimary2 : kPrimary,
+                        ),
+                        if (isActive) const Gap(6),
+                        if (isActive)
+                          Container(
+                            height: h * .004,
+                            width: w * .045,
+                            decoration: BoxDecoration(
+                                color: kPrimary2,
+                                borderRadius: BorderRadius.circular(15)),
+                          )
+                      ],
+                    ),
                   ),
-                ),
-              );
-            }),
-          ),
-        ));
+                );
+              }),
+            ),
+          )),
+    );
   }
 }

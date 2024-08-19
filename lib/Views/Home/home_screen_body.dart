@@ -3,6 +3,7 @@ import 'package:coffee_shop/Views/Widgets/build_header.dart';
 import 'package:coffee_shop/Views/Widgets/categories.dart';
 import 'package:coffee_shop/Views/Widgets/custom_banner_promo.dart';
 import 'package:coffee_shop/Views/Widgets/custom_search_textfield.dart';
+import 'package:coffee_shop/Views/Widgets/grid_coffee.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
@@ -30,8 +31,10 @@ class HomeScreenBody extends StatelessWidget {
                   ),
                   Gap(h * .033),
                   const CustomBannerPromo(),
-                  Gap(h * .02),
-                  const Categories()
+                  Gap(h * .025),
+                  const Categories(),
+                  Gap(h * .028),
+                  const GridCoffee()
                 ],
               ),
             ),
