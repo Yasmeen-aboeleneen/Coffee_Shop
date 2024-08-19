@@ -14,6 +14,7 @@ class CustomBannerPromo extends StatelessWidget {
         Images.banner,
         width: w,
         height: h * .177,
+        fit: BoxFit.cover,
       ),
     );
   }

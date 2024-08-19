@@ -1,5 +1,6 @@
 import 'package:coffee_shop/Views/Widgets/build_background.dart';
 import 'package:coffee_shop/Views/Widgets/build_header.dart';
+import 'package:coffee_shop/Views/Widgets/categories.dart';
 import 'package:coffee_shop/Views/Widgets/custom_banner_promo.dart';
 import 'package:coffee_shop/Views/Widgets/custom_search_textfield.dart';
 import 'package:flutter/material.dart';
@@ -27,9 +28,10 @@ class HomeScreenBody extends StatelessWidget {
                   const CustomSearchTextfield(
                     hint: " Search coffee",
                   ),
-                  Gap(h * .05),
+                  Gap(h * .033),
                   const CustomBannerPromo(),
-                  // Categories()
+                  Gap(h * .02),
+                  const Categories()
                 ],
               ),
             ),
