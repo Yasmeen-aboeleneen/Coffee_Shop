@@ -37,6 +37,8 @@ class CustomSearchTextfield extends StatelessWidget {
                   ),
                   cursorColor: kPrimary,
                   decoration: InputDecoration(
+                      contentPadding: const EdgeInsets.all(2),
+                      isDense: true,
                       hintText: hint,
                       hintStyle: TextStyle(
                         fontWeight: FontWeight.bold,

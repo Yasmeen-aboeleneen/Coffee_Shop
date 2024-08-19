@@ -9,7 +9,7 @@ class BuildBackground extends StatelessWidget {
     var h = MediaQuery.of(context).size.height;
     var w = MediaQuery.of(context).size.width;
     return Container(
-      height: h * .29,
+      height: h * .32,
       width: w,
       decoration: const BoxDecoration(
         gradient: LinearGradient(
