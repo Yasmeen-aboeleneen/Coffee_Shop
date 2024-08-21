@@ -36,7 +36,9 @@ class _GridCoffeeState extends State<GridCoffee> {
           Coffee coffee = listGridCoffee[index];
           return GestureDetector(
             onTap: () {
-              Get.to(() => const DetailsScreen());
+              Get.to(() => DetailsScreen(
+                    coffee: coffee,
+                  ));
             },
             child: Container(
               decoration: BoxDecoration(
